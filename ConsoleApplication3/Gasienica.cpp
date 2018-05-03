@@ -3,7 +3,7 @@
 
 #include "stdafx.h"
 
-#include <stack>
+
 #include <iostream>
 #include <conio.h>
 #include <windows.h>
@@ -74,7 +74,7 @@ void move_up();
 void move_down();
 void sprawdz_przeszkode();
 
-void aktywacja_pola(); // potrzebne?
+void aktywacja_pola();
 void load_test_map();
 void refresh_test_map();
 
@@ -124,7 +124,7 @@ void create_Edek(){
 
 	int dlugosc;
 	cout << "Podaj dlugosc Edka: ";
-	cin >> dlugosc;														//dodac ograniczenie!!!!
+	cin >> dlugosc;														
 	dlugosc_Edka = dlugosc;
 	cout << endl;
 
@@ -235,12 +235,7 @@ void zawartosc_mapy(){
 	refresh_test_map();
 	poruszanie_Edka();
 
-/*	//zwolnienie pamiêci
-	for (int i = 0; i<wysokosc; i++)
-		delete[] gMapa[i];
 
-	delete[] * gMapa;
-*/
 
 }
 
@@ -344,7 +339,7 @@ void move_right(){
 		memory_lokacja = gMapa[x_Edka + 1][y_Edka];
 		x_Edka++;
 		y_Edka;
-		gMapa[x_Edka][y_Edka] = 'o';							// wywaliæ na koniec!!!
+		gMapa[x_Edka][y_Edka] = 'o';							
 		refresh_test_map();
 
 		if (next_przeszkoda == 'K')
@@ -357,7 +352,7 @@ void move_right(){
 			
 			grzyb();
 		}
-		else if (next_przeszkoda >=97 && next_przeszkoda <=122)		// TODO!!!
+		else if (next_przeszkoda >=97 && next_przeszkoda <=122)		
 		{
 			kaluza();
 		}
@@ -409,7 +404,7 @@ void move_left(){
 
 			grzyb();
 		}
-		else if (next_przeszkoda >= 97 && next_przeszkoda <= 122)		// TODO!!!
+		else if (next_przeszkoda >= 97 && next_przeszkoda <= 122)		
 		{
 			kaluza();
 		}
@@ -459,7 +454,7 @@ void move_up(){
 
 			grzyb();
 		}
-		else if (next_przeszkoda >= 97 && next_przeszkoda <= 122)		// TODO!!!
+		else if (next_przeszkoda >= 97 && next_przeszkoda <= 122)		
 		{
 			kaluza();
 		}
@@ -588,7 +583,7 @@ void poruszanie_Edka(){
 		cout << suma_krokow << endl;
 		cout << remember_f << "   "  << test;
 		q.display();
-	//	q.display2();
+
 
 	
 	} while (0 == 0);
@@ -755,10 +750,3 @@ void edek_krok(){
 	
 
 }
-
-
-
-
-
-
-
